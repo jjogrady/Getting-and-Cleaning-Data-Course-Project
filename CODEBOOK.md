@@ -12,7 +12,7 @@
 
 **Variable Names
         Labeled "FeatureName" and "FeatureNum" 
-        These signals were used to estimate variables of the feature vector for each          pattern: '-XYZ' is used to denote 3-axial signals in the X, Y and Z                   directions.
+        These signals were used to estimate variables of the feature vector for each pattern: '-XYZ' is used to denote 3-axial signals in the X, Y and Z                   directions.
         "(Time)BodyAccelerometer-XYZ"
         "(Time)GravityAccelerometer-XYZ"
         "(Time)BodyAccelerometerJerk-XYZ"

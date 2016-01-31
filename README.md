@@ -1,5 +1,5 @@
 Getting-and-Cleaning-Data-Course-Project
-Jerome O. 2016-01-31
+Jerome OGrady 2016-01-31
 
 **Instructions
 
