@@ -2,8 +2,15 @@
 library(dplyr)
 library(data.table)
 library(tidyr)
+#Download the Data
+if(!file.exists("./data")){dir.create("./data")}
+filesPath <- "./data"
+setwd(filesPath)
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileUrl,destfile="./Dataset.zip")
 #Extract the Data
-filesPath <- "./data/UCI HAR Dataset"
+unzip(zipfile = "./Dataset.zip")
+filesPath <- "./UCI HAR Dataset"
 #Subject Data
 dataSubjectTrain <- tbl_df(read.table(file.path(filesPath, "train", "subject_train.txt")))
 dataSubjectTest  <- tbl_df(read.table(file.path(filesPath, "test" , "subject_test.txt" )))
