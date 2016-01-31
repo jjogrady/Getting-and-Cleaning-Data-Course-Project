@@ -1,5 +1,9 @@
+#Load Packages
+library(dplyr)
+library(data.table)
+library(tidyr)
 #Extract the Data
-filesPath <- "C:/Users/i55802/datasciencecoursera/data/UCI HAR Dataset"
+filesPath <- "./data/UCI HAR Dataset"
 #Subject Data
 dataSubjectTrain <- tbl_df(read.table(file.path(filesPath, "train", "subject_train.txt")))
 dataSubjectTest  <- tbl_df(read.table(file.path(filesPath, "test" , "subject_test.txt" )))
@@ -61,10 +65,7 @@ names(dataTable)<-gsub("BodyBody", "Body", names(dataTable))
 
 ###From the data set in step 4, creates a second, independent tidy data set 
 ###with the average of each variable for each activity and each subject.
-#Create tidy data
-melt_data <- melt(dataTable, id=c("Subject","ActivityName"))
-tidy_data <- dcast(melt_data, Subject+ActivityName ~ variable, mean)
 #Create tidy data text file
-write.table(tidy_data, "TidyData.txt", row.name=FALSE)
+write.table(dataTable, "TidyData.txt", row.name=FALSE)
 
 
